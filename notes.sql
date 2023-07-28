@@ -4,5 +4,25 @@
 
 -- These two statements operate on the 
 -- restaurant.db SQLite database.
-SELECT * FROM Dishes;
-SELECT * FROM Customers;
+SELECT FirstName, LastName,Email
+FROM Customers
+ORDER BY LastName;
+
+CREATE TABLE AnniversaryAttendees (
+CustomerID integer,
+PartySize integer
+);
+
+SELECT Name, Description,Price ,Type
+FROM Dishes
+ORDER BY Price;
+
+SELECT Name, Description,Price ,Type
+FROM Dishes
+WHERE Type='Appetizer' OR Type='Beverage'
+ORDER BY Type;
+
+SELECT Name, Description,Price ,Type
+FROM Dishes
+WHERE Type!='Beverage'
+ORDER BY Type;
